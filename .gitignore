@@ -1,0 +1,14 @@
+# 运行时生成的文件与日志
+logs/
+*.log
+backups/
+
+# 系统临时文件
+.DS_Store
+*~
+*.swp
+__pycache__/
+*.pyc
+
+# 固件大文件（如果用户后续存放自定义镜像）
+# firmware/*.bin

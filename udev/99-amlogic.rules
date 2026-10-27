@@ -1,0 +1,8 @@
+# Amlogic SoC USB 烧录设备 udev 规则
+# 允许普通用户访问 Amlogic 烧录设备，无需始终使用 sudo 运行 update 工具
+# 安装方法:
+#   sudo cp 99-amlogic.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+
+SUBSYSTEM=="usb", ATTR{idVendor}=="1b8e", MODE="0666"
+SUBSYSTEM=="usb", ATTR{idVendor}=="1b8e", ATTR{idProduct}=="0cee", MODE="0666"
